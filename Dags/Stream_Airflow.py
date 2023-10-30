@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 from airflow.models import Variable
-from Dags.Get_Data_dag import get_data,format_data,stream_data
+from Dags.Get_Data_dag import get_data
 from Dags.Get_Data_dag import format_data
 from Dags.Get_Data_dag import stream_data
 

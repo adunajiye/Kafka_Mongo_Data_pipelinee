@@ -34,17 +34,26 @@ def create_connection():
     collection_created = data_created[collection_name]
     
     json_object = get_data()
-    # print(json_object)
-    jsonerized_object =json.dumps(str(json_object))
-    # Insert Bulk Data into collection
-    result = collection_created.insert_many(jsonerized_object)
-    result.inserted_ids
-    print(result)
-    # except (Exception, pymongo.DatabaseError) as error:
-    #     print(error)
-    # finally:
+    json_object = json.dumps(json_object,indent=4)
+    
+    # Find Document in the collection 
+    result = collection_created.find()
+    for document in result:
+        print(document)
+        
+    document = { "name": "John", "age": 25 }
+    # print(document)
+    # result = collection_created.insert_one(document)
+    # print(result.inserted_id)
+            
+    # Insert Data into Mongo Database 
+    if   isinstance(json_object, dict):
+        collection_created.insert_one(json_object)
+    else:
+            print(f"Skipping invalid document:{json_object}")
+    
+    
     if client is not None:
         client.close()
 print('Database connection closed.')
-
 create_connection()

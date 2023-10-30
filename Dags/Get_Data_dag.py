@@ -17,7 +17,8 @@ def get_data():
     res = res.json()
     # print(res)
     ress = res['results'][0]
-    return ress
+    # ress = json.dumps(ress,indent = 4)
+    print (ress)
 get_data()
 
 
@@ -27,8 +28,8 @@ def format_data():
     data = {}
     data['id'] = uuid.uuid4()
     # print(data['id'])
-    location = get_dataa['location']
-    # print(location)
+    location = get_dataa["location"]
+    print(location)
     
     get_dataa['first_name'] = get_dataa['name']['first']
     # print(get_dataa['first_name'])

@@ -2,9 +2,9 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 from airflow.models import Variable
-from Dags.Get_Data_dag import get_data
-from Dags.Get_Data_dag import format_data
-from Dags.Get_Data_dag import stream_data
+from Get_Data_dag import get_data
+from Get_Data_dag import format_data
+from .Get_Data_dag import stream_data
 
 
 with DAG("Stream_Api_Data", start_date=datetime(2023, 10, 27),

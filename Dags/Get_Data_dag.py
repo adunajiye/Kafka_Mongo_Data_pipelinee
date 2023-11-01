@@ -28,23 +28,23 @@ def format_data():
     data = {}
     data['id'] = uuid.uuid4()
     # print(data['id'])
-    location = get_dataa["location"]
-    print(location)
+    # location = get_dataa["location"]
+    # print(location)
     
-    get_dataa['first_name'] = get_dataa['name']['first']
-    # print(get_dataa['first_name'])
-    data['last_name'] = get_dataa['name']['last']
-    data['gender'] = get_dataa['gender']
-    data['address'] = f"{str(location['street']['number'])} {location['street']['name']}, " \
-                      f"{location['city']}, {location['state']}, {location['country']}"
-    data['post_code'] = location['postcode']
-    data['email'] = get_dataa['email']
-    print(data['email'])
-    data['username'] = get_dataa['login']['username']
-    data['dob'] = get_dataa['dob']['date']
-    data['registered_date'] = get_dataa['registered']['date']
-    data['phone'] = get_dataa['phone']
-    data['picture'] = get_dataa['picture']['medium']
+    # get_dataa['first_name'] = get_dataa['name']['first']
+    # # print(get_dataa['first_name'])
+    # data['last_name'] = get_dataa['name']['last']
+    # data['gender'] = get_dataa['gender']
+    # data['address'] = f"{str(location['street']['number'])} {location['street']['name']}, " \
+    #                   f"{location['city']}, {location['state']}, {location['country']}"
+    # data['post_code'] = location['postcode']
+    # data['email'] = get_dataa['email']
+    # print(data['email'])
+    # data['username'] = get_dataa['login']['username']
+    # data['dob'] = get_dataa['dob']['date']
+    # data['registered_date'] = get_dataa['registered']['date']
+    # data['phone'] = get_dataa['phone']
+    # data['picture'] = get_dataa['picture']['medium']
 
     print(data)
     # print(data)
@@ -59,8 +59,8 @@ def stream_data():
     with topic.get_sync_producer() as producer:
         for i in range(10):
             message = get_data() 
-            message_1 = format_data()
-            encoded_message = json.dumps(message_1).encode("utf-8")
+            # message_1 = format_data()
+            encoded_message = json.dumps(message).encode("utf-8")
             producer.start()
             producer.produce(encoded_message)
             

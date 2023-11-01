@@ -9,4 +9,12 @@ Apache Airflow: An open source platform used to schedule and monitor workflows
 
 Apache Kafka: A distributed streaming platform designed for fault tolerance, high throughput and scalibility
 
-#
+Apache Spark: A unified analytics engine for big data processing with built in modules for streaming, SQL Machine learning and graph processing.
+
+Docker: A containerization tool that allows for isolated, consistent and easily deployable applications
+
+Mongo DB:
+
+PostgreSQL: Ana open source relational database that focuses on extensibility and SQL compliance 
+
+Linux: DigitalOcean Droplets

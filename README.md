@@ -16,3 +16,15 @@ We will explore an end to end data engineering project that uses docker, Apache 
 5. PostgreSQL: Ana open source relational database that focuses on extensibility and SQL compliance 
 
 6. Linux: DigitalOcean Droplets
+
+# Architecture Overview
+
+1. Data Ingestion: Raw Data gotten from API is ingested into the system using Kafka. The data can come from various sources like IOT Devices, user activity etc.
+
+2. Data Processing: Airflow schedules spark jobs to process the raw data. The processed data can either be aggregated, filtered, or transformed based on my business logic
+
+3. Data Storage: The processing data is stored in either Mongo DB or PostgreSQL for relational data storage.
+  
+4. Orchestartion: Docker container encapsulate each component of the architecture , ensuring isolation and ease of deployment.
+
+

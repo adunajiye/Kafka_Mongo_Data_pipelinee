@@ -13,8 +13,6 @@ We will explore an end to end data engineering project that uses docker, Apache 
 
 4. Docker: A containerization tool that allows for isolated, consistent and easily deployable applications
 
-5. Mongo DB: is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas
+5. PostgreSQL: Ana open source relational database that focuses on extensibility and SQL compliance 
 
-6. PostgreSQL: Ana open source relational database that focuses on extensibility and SQL compliance 
-
-7. Linux: DigitalOcean Droplets
+6. Linux: DigitalOcean Droplets
